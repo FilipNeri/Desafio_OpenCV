@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaController">
+	<center>
+	   <ImageView fx:id="insertFrame" />
+   </center>
+   <right>
+      <VBox alignment="CENTER_LEFT" spacing="10">
+         <padding>
+            <Insets left="10" right="20" />
+         </padding>
+         <ImageView fx:id="imageHistograma" />
+         <Text text="Controles" />
+         <CheckBox fx:id="checkCinza" text="Mostra em Cinza" />
+         <CheckBox fx:id="checkLogo" onAction="#carregaLogo" text="Mostrar Logo" />
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER">
+         <padding>
+            <Insets bottom="25" left="25" right="25" top="25" />
+         </padding>
+         <Button fx:id="buttonCam" alignment="center" onAction="#iniciaCamera" text="Start camera" />
+      </HBox>
+   </bottom>
+</BorderPane>
